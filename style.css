@@ -1,0 +1,204 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(135deg, #10051c, #23083b, #10051c);
+    overflow-x: hidden;
+}
+
+.money-background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.money {
+    position: absolute;
+    top: -50px;
+    opacity: 0.55;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.hero {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 45px 15px 25px;
+}
+
+.logo {
+    font-size: clamp(32px, 7vw, 65px);
+    font-weight: 900;
+    letter-spacing: 3px;
+    color: #e6c6ff;
+    text-shadow:
+        0 0 10px #a020f0,
+        0 0 25px #a020f0,
+        0 0 45px #7b2cbf;
+}
+
+.subtitle {
+    margin-top: 12px;
+    color: #d6aaff;
+    letter-spacing: 3px;
+    font-size: 13px;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    width: 92%;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-title {
+    margin: 25px 0;
+    font-size: clamp(18px, 4vw, 27px);
+    color: #f0d9ff;
+    text-shadow: 0 0 12px #a020f0;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.service-card {
+    padding: 12px 10px;
+    background: rgba(110, 35, 160, 0.25);
+    border: 1px solid #a64dff;
+    border-radius: 15px;
+    box-shadow: 0 0 12px rgba(160, 32, 240, 0.25);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 22px #a020f0;
+}
+
+.emoji {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.service-card h3 {
+    font-size: 14px;
+    color: #e8c7ff;
+    margin-bottom: 6px;
+}
+
+.service-card p {
+    font-size: 12px;
+    color: #d8c3e8;
+}
+
+.advantages,
+.schedule,
+.contacts {
+    margin: 25px 0;
+    padding: 20px;
+    background: rgba(65, 20, 95, 0.45);
+    border: 1px solid rgba(180, 100, 255, 0.6);
+    border-radius: 16px;
+    box-shadow: 0 0 15px rgba(160, 32, 240, 0.15);
+}
+
+.advantages h2,
+.schedule h2,
+.contacts h2 {
+    color: #e6c6ff;
+    margin-bottom: 15px;
+}
+
+.advantages p,
+.schedule p {
+    margin: 10px 0;
+    color: #eee0ff;
+}
+
+.contact-button {
+    display: block;
+    max-width: 360px;
+    margin: 12px auto;
+    padding: 13px 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.contact-button:hover {
+    transform: scale(1.04);
+    filter: brightness(1.2);
+}
+
+.telegram {
+    background: linear-gradient(90deg, #168bd1, #0066aa);
+}
+
+.chat {
+    background: linear-gradient(90deg, #7c36c9, #4e168a);
+}
+
+.guarant {
+    background: linear-gradient(90deg, #a36a13, #704000);
+}
+
+.reviews {
+    background: linear-gradient(90deg, #c18b18, #8a5b00);
+}
+
+footer {
+    position: relative;
+    z-index: 1;
+    padding: 25px 10px;
+    text-align: center;
+    color: #b99acb;
+    font-size: 13px;
+}
+
+@media (max-width: 480px) {
+    .services {
+        gap: 8px;
+    }
+
+    .service-card {
+        padding: 10px 5px;
+    }
+
+    .service-card h3 {
+        font-size: 12px;
+    }
+
+    .service-card p {
+        font-size: 11px;
+    }
+
+    .advantages,
+    .schedule,
+    .contacts {
+        padding: 15px 10px;
+    }
+}
